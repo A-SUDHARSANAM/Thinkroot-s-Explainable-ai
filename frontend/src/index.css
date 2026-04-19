@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f8fafc;
+  background: #07153a;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", ui-sans-serif, sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(250, 204, 21, 0.08), transparent 38%),
+    radial-gradient(circle at 85% 90%, rgba(16, 185, 129, 0.08), transparent 32%),
+    #07153a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  @apply rounded-2xl bg-[#1a2a46]/95 border border-slate-700/70;
+}
+
+.fade-up {
+  animation: fadeUp 0.35s ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
